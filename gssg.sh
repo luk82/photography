@@ -2,7 +2,7 @@
 
 # Define urls and https
 from_url=http://localhost:2368
-to_url=photography.github.io
+to_url=http://luk82.github.io/photography
 
 # Copy blog content
 wget --recursive --no-host-directories --directory-prefix=static --adjust-extension --timeout=30 --no-parent --convert-links ${from_url}/
