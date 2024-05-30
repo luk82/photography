@@ -1,0 +1,18 @@
+{
+  "src_dir": "./content",
+  "dest_dir": "./static",
+  "scripts": {
+    "reset": "rm -rf $npm_package_dest_dir/* && rm -rf $npm_package_src_dir/static/",
+    "paste-static-files": "cp -R $npm_package_src_dir/static/* $npm_package_dest_dir/",
+    "preview": "open $npm_package_dest_dir/index.html",
+    "push-to-origin-src": "cd $npm_package_src_dir && git add . && git commit -m 'automatic commit' && git push",
+    "push-to-origin-dest": "cd $npm_package_dest_dir && git add . && git commit -m 'automatic commit' && git push",
+    "generate-static-files": "./gssg.sh",
+    "prepublish": "npm run reset",
+    "publish": "npm run generate-static-files && npm run paste-static-files && npm run preview",
+    "postpublish": "npm run push-to-origin-src && npm run push-to-origin-dest"
+  },
+  "dependencies": {
+    "ghost-static-site-generator": "^1.1.4"
+  }
+}
