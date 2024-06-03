@@ -11,7 +11,13 @@
             <header class="gh-article-header gh-canvas">
                 {{> "feature-image"}}
 
-                <h1 class="gh-article-title">{{title}}</h1>
+
+                
+
+                {{#if title}}
+        <h1 class="gh-article-title">{{title}}</h1>
+
+{{/if}}
 
                 {{#if custom_excerpt}}
                     <div class="gh-article-excerpt">{{custom_excerpt}}</div>
