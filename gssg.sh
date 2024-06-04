@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define urls and https
-from_url=http://localhost:2368
-to_url=http://luk82.github.io/photography
+from_url=localhost:2369
+to_url=weddingphotography.pro
 
 # Copy blog content
 wget --recursive --no-host-directories --directory-prefix=static --adjust-extension --timeout=30 --no-parent --convert-links ${from_url}/
