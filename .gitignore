@@ -1,6 +1,5 @@
 # Dependency directories
 node_modules/
-static/
 
 # OSX
 .DS_Store
