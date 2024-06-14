@@ -1,7 +1,3 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Sitemap: https://weddingphotography.pro/sitemap.xml
-Disallow: /ghost/
-Disallow: /email/
-Disallow: /members/api/comments/counts/
-Disallow: /r/
-Disallow: /webmentions/receive/
+Disallow:
