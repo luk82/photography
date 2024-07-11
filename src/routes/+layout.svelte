@@ -1,53 +1,39 @@
 <script>
-	import Header from './Header.svelte';
 	import './styles.css';
+	// import '$lib/styles.css';
+
+	import '@luk82/ds-lit-tailwind/src/components/ds-tw-footer/ds-tw-footer.js';
+	import '@luk82/ds-lit-tailwind/src/components/ds-tw-menu/ds-tw-menu.js';
+
+	let menus = [
+		{ name: 'Home', href: '/' },
+		// { name: 'Blog', href: '/blog' },
+		{ name: 'Pricing', href: '/pricing' },
+		{ name: 'Contact', href: '/contact' }
+	];
+
+	let footerLinks = [
+		{
+			name: '',
+			links: menus
+		}
+	];
 </script>
 
-<div class="app">
-	<Header />
+<ds-tw-menu logoLink="/" links={menus}>
+	<span slot="logo"
+		><img src="images/logo.svg" width="75" alt="LC Photography" /><span class="white" /></span
+	></ds-tw-menu
+>
 
-	<main>
-		<slot />
-	</main>
+<main>
+	<slot />
+</main>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
-</style>
+<ds-tw-footer menu={footerLinks} horizontal variant="secondary">
+	<!-- <span slot="logo"
+		><img src="images/logo.svg" width="75" alt="LC Photography" /><span class="white" /></span
+	> -->
+	<span slot="header" />
+	<span slot="footnote">© 2024 LC Photography.</span></ds-tw-footer
+>

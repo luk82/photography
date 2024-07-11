@@ -4,9 +4,7 @@
 	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
-	--color-bg-0: rgb(202, 216, 228);
-	--color-bg-1: hsl(209, 36%, 86%);
-	--color-bg-2: hsl(224, 44%, 95%);
+
 	--color-theme-1: #ff3e00;
 	--color-theme-2: #4075a6;
 	--color-text: rgba(0, 0, 0, 0.7);
@@ -14,6 +12,118 @@
 	--column-margin-top: 4rem;
 	font-family: var(--font-body);
 	color: var(--color-text);
+}
+
+:root {
+	/* --container-width: auto; */
+
+	/* _EXAMPLE_ Colors */
+	/* https://coolors.co/0e7c7b-17bebb-d4f4dd-d62246-4b1d3f */
+	--color1: rgb(37 147 184);
+	--color2: rgb(35 181 211);
+	--color3: rgb(117 171 188);
+	--color4: rgb(162 174 187);
+	--color5: rgb(223 224 174);
+
+	/* --color1: rgb(14 124 123);
+	--color2: rgb(23 190 187);
+	--color3: rgb(212 244 221);
+	--color4: rgb(214 34 70);
+	--color5: rgb(75 29 63); */
+
+	--background: var(--color1); /* NOT IN USE? */
+	--white: #fff;
+	--body-background: none;
+	--dark: var(--color2); /* NOT IN USE? */
+	--light: var(--color3);
+	--medium-light: var(--color4); /* NOT IN USE? */
+	--medium: var(--color5); /* NOT IN USE? */
+	--medium-dark: var(--color5); /* NOT IN USE? */
+
+	--font-family0: 'Satoshi-Regular', sans-serif;
+	--font-family1: 'Satoshi-Bold', sans-serif;
+	--font-family2: 'Roboto', sans-serif;
+	--font-family3: 'Lugrasimo', cursive;
+	--font-family4: 'Bungee Spice', cursive;
+	--font-family5: 'Bungee Inline', cursive;
+
+	--font-family: var(--font-family0);
+	--font-family-heading: var(--font-family1);
+
+	--margin-bottom: 4rem;
+
+	/* Component Colors */
+	--primary: var(--color3);
+	--secondary: var(--color5);
+	--primary-light: var(--color3); /* NOT IN USE? */
+	--secondary-light: var(--color3);
+	--primary-dark: var(--color3);
+	--secondary-dark: var(--color3);
+
+	--menu-bg: rgb(255 255 255);
+	--footer-bg: var(--menu-bg);
+
+	--band-bg: var(--color5);
+	--band-bg-dark: var(--color3);
+
+	--footer-text-color: var(--color3);
+
+	--hero-theme: var(--color1);
+	--hero-primary: var(--color5);
+	--hero-bg: var(--color1);
+
+	--feature-bg: var(--color2);
+	--feature-text: rgb(0 0 0);
+
+	--feature-bg: var(--color5);
+	--feature-text: rgb(0 0 0);
+
+	[variant='secondary'] {
+		--feature-bg: var(--color1);
+		--feature-text: rgb(0 0 0);
+	}
+
+	--feature-theme: var(--color1);
+
+	--cta-theme: var(--color1);
+	--cta-bg: var(--color1);
+	--cta-bg-right: var(--color1);
+
+	--cta-text: #fdfdfd;
+	--cta-border-radius: 0px;
+
+	--search-input-bg: inherit;
+
+	--pricing-theme: var(--color2);
+	--pricing-primary: var(--color3);
+	--pricing-secondary: var(--color4);
+	--pricing-bg: var(--color1);
+
+	--membership-theme: var(--color5);
+	--membership-primary: var(--color4);
+	--membership-secondary: var(--color1);
+	--membership-bg: rgb(255 255 255);
+
+	--menu-primary: var(--color1);
+
+	--button-theme: var(--color5);
+	--button-primary: var(--color1);
+	--button-secondary: var(--color5);
+
+	--form-button-bg: #395c6b;
+	--form-button-bg-hover: rgb(212 203 146);
+	--form-bg-input: white;
+	--form-button-text: white;
+	--form-button-text-hover: rgb(57 92 107);
+
+	--form-bg: var(--color5);
+
+	#bookingform {
+		--cta-theme: var(--color1);
+		--cta-text: rgb(0 0 0);
+		--cta-bg: rgb(255 255 255);
+		--cta-bg-right: rgb(255 255 255);
+	}
 }
 
 body {
