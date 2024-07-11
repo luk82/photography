@@ -1,9 +1,8 @@
 <script>
-	import './styles.css';
-	// import '$lib/styles.css';
-
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-footer/ds-tw-footer.js';
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-menu/ds-tw-menu.js';
+	import './styles.css';
+	// import '$lib/styles.css';
 
 	let menus = [
 		{ name: 'Home', href: '/' },
