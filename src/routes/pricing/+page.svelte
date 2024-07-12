@@ -10,7 +10,7 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<ds-tw-band variant="primary" height="400" to-center="" bgImage="images/banner3.jpg" skew=""
+<ds-tw-band variant="primary" height="400" to-center="" bgImage="images/slider-1.jpg" skew=""
 	><div slot="header" />
 	<div slot="body">
 		<p />
@@ -122,16 +122,32 @@ Additional copy of a wedding album;
 	</span>
 </ds-tw-pricing>
 
-<ds-tw-feature image="images/banner2.jpg" variant="primary" skew=""
-	><span slot="kicker">Sint amet magna</span>
-	<span slot="header"> Ullamco officia commodo cupidatat sint ad.</span>
+<ds-tw-feature image="images/wedding-photography-sessions.jpg" variant="primary"
+	><span slot="kicker">Capture the Magic Before the Big Day</span>
+	<span slot="header"> Discover the Charm and Intimacy of Pre-Wedding Photography Sessions</span>
 	<span slot="body">
-		Sint laborum id incididunt fugiat ipsum incididunt excepteur nostrud dolore est consectetur enim
-		excepteur. Deserunt veniam magna voluptate in voluptate. Ad ut sint tempor ea quis deserunt.
-		Labore irure incididunt laboris ex do eu dolor mollit fugiat adipisicing minim.
+		<p>
+			Pre-wedding sessions, also known as engagement shoots, offer couples a unique opportunity to
+			capture their love story before the big day. These sessions are a relaxed and enjoyable way to
+			get comfortable in front of the camera, allowing you to showcase your personalities and
+			relationship in a more informal setting. Our experienced photographers will guide you through
+			various poses and locations, ensuring that each moment is beautifully captured. Whether you
+			prefer a romantic sunset at the beach, a stroll through a picturesque park, or an urban
+			adventure in the city, we tailor each session to reflect your unique style and love story.
+		</p>
+
+		<p>
+			During a pre-wedding session, we focus on capturing candid moments and genuine emotions that
+			highlight the bond between you and your partner. These photos not only serve as a beautiful
+			memento but also provide a great opportunity to experiment with different looks and poses that
+			you might want to incorporate on your wedding day. The images from your pre-wedding session
+			can be used for save-the-dates, wedding invitations, or as decor at your wedding reception.
+			Our goal is to create a fun and memorable experience that results in stunning photos you'll
+			cherish forever, setting the perfect tone for your upcoming nuptials.
+		</p>
 		<div>
 			<br />
-			<ds-tw-button variant="primary-2" link="#" hasarrow=""> Sint laborum </ds-tw-button>
+			<ds-tw-button variant="primary-2" link="#" hasarrow="" />
 		</div>
 	</span>
 	<span slot="buttons">

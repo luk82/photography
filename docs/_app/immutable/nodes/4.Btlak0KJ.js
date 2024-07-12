@@ -1,4 +1,4 @@
-var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configurable:!0,writable:!0,value:e}):n[s]=e;var b=(n,s,e)=>$(n,typeof s!="symbol"?s+"":s,e);import{d as T}from"../chunks/index.R8ovVqwX.js";import{s as E,n as f}from"../chunks/scheduler.Bmg8oFKD.js";import{S as j,i as P,e as x,s as y,A as I,c as w,d as m,f as k,y as C,o as M,z as d,h as B,g as h}from"../chunks/index.ClnunyA3.js";import{s as _,T as S,i as A,x as l,e as u,r as R,a as q,d as H}from"../chunks/class-map.4yN0Eo_Y.js";import"../chunks/ds-tw-band.CmcJkru6.js";import"../chunks/ds-tw-feature.CeDHFY95.js";const W=T,D=!0,X=Object.freeze(Object.defineProperty({__proto__:null,csr:W,prerender:D},Symbol.toStringTag,{value:"Module"}));class G extends _{constructor(){super();b(this,"svgIcons",{check:l`<svg
+var L=Object.defineProperty;var $=(i,s,e)=>s in i?L(i,s,{enumerable:!0,configurable:!0,writable:!0,value:e}):i[s]=e;var f=(i,s,e)=>$(i,typeof s!="symbol"?s+"":s,e);import{d as T}from"../chunks/index.R8ovVqwX.js";import{s as P,n as b}from"../chunks/scheduler.Bmg8oFKD.js";import{S as E,i as j,e as x,s as y,A as I,c as w,d as p,f as k,y as C,o as M,z as m,h as B,g as h}from"../chunks/index.ClnunyA3.js";import{s as _,T as S,i as q,x as r,e as u,r as A,a as R,d as W}from"../chunks/class-map.4yN0Eo_Y.js";import"../chunks/ds-tw-band.CmcJkru6.js";import"../chunks/ds-tw-feature.CeDHFY95.js";const D=T,H=!0,X=Object.freeze(Object.defineProperty({__proto__:null,csr:D,prerender:H},Symbol.toStringTag,{value:"Module"}));class G extends _{constructor(){super();f(this,"svgIcons",{check:r`<svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       version="1.1"
@@ -25,7 +25,7 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
           stroke-linecap="round"
         />
       </g>
-    </svg>`,cross:l`<svg
+    </svg>`,cross:r`<svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       version="1.1"
@@ -56,23 +56,23 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
           transform=" matrix(0.707 -0.7072 0.7072 0.707 -18.6396 45.0055) "
         />
       </g>
-    </svg>`});this.variant="primary",this.hasRoundedCorners=!1,this.skew="none",this._yearly=!1,this._monthly=!0,this.savings=10}static get styles(){return[S,A`
+    </svg>`});this.variant="primary",this.hasRoundedCorners=!1,this.skew="none",this._yearly=!1,this._monthly=!0,this.savings=10}static get styles(){return[S,q`
         :host {
           --skew-bg: var(--pricing-bg);
         }
-      `]}static get properties(){return{variant:{type:String},hasRoundedCorners:{type:Boolean},skew:{type:String},_yearly:{type:Boolean},_montly:{type:Boolean},savings:{type:Number}}}renderListItems(e,t){const c=e.map(i=>l`
+      `]}static get properties(){return{variant:{type:String},hasRoundedCorners:{type:Boolean},skew:{type:String},_yearly:{type:Boolean},_montly:{type:Boolean},savings:{type:Number}}}renderListItems(e,t){const c=e.map(a=>r`
         <li class="mb-6 flex items-center">
           ${this.svgIcons.check}
           <span class="ml-2 text-sm text-[var(--pricing-primary)]"
-            >${i}</span
+            >${a}</span
           >
         </li>
-      `),p=t.map(i=>l` <li class="mb-6 flex items-center">
+      `),d=t.map(a=>r` <li class="mb-6 flex items-center">
         ${this.svgIcons.cross}
         <span class="ml-2 text-sm text-[var(--pricing-secondary)]"
-          >${i}</span
+          >${a}</span
         >
-      </li>`);return[c,p]}renderTemplate(){if(this.variant=="secondary"){const e={"bg-[var(--pricing-primary)]":this._yearly},t={"bg-[var(--pricing-primary)]":this._monthly};return l`<section>
+      </li>`);return[c,d]}renderTemplate(){if(this.variant=="secondary"){const e={"bg-[var(--pricing-primary)]":this._yearly},t={"bg-[var(--pricing-primary)]":this._monthly};return r`<section>
         <div class="bg-[var(--pricing-bg)] py-20">
           <div class="container mx-auto px-4">
             <div class="mx-auto mb-16 max-w-2xl text-center">
@@ -386,7 +386,7 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
             </div>
           </div>
         </div>
-      </section>`}if(this.variant=="primary")return l`<div class="bg-white py-24 sm:py-32">
+      </section>`}if(this.variant=="primary")return r`<div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-[var(--container-width)] px-6 lg:px-8">
           <div class="mx-auto max-w-2xl sm:text-center">
             <h2
@@ -400,7 +400,7 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
           </div>
           <slot name="memberships"></slot>
         </div>
-      </div>`;if(this.variant=="secondary-2")return this.hasRoundedCorners,this.hasRoundedCorners,l` <section
+      </div>`;if(this.variant=="secondary-2")return this.hasRoundedCorners,this.hasRoundedCorners,r` <section
         class="relative overflow-hidden bg-[var(--pricing-bg)] py-20 "
       >
         <div class="container relative mx-auto px-4">
@@ -433,7 +433,7 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
             </div>
           </div>
         </div>
-      </section>`}render(){return l`${R(this.skew)}${this.renderTemplate()}${q(this.skew)}`}}customElements.define("ds-tw-pricing",G);class N extends _{constructor(){super();b(this,"svgIcons",{check:l`<svg
+      </section>`}render(){return r`${A(this.skew)}${this.renderTemplate()}${R(this.skew)}`}}customElements.define("ds-tw-pricing",G);class N extends _{constructor(){super();f(this,"svgIcons",{check:r`<svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       version="1.1"
@@ -460,7 +460,7 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
           stroke-linecap="round"
         />
       </g>
-    </svg>`,cross:l`<svg
+    </svg>`,cross:r`<svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       version="1.1"
@@ -491,19 +491,19 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
           transform=" matrix(0.707 -0.7072 0.7072 0.707 -18.6396 45.0055) "
         />
       </g>
-    </svg>`});this.variant="primary",this.listElements="",this.currency="£",this.hideCta=!1,this.hasRoundedCorners=!1,this.highlighted=!1}static get styles(){return[S]}static get properties(){return{variant:{type:String},listElements:{type:String},currency:{type:String},hideCta:{type:Boolean},hasRoundedCorners:{type:Boolean},highlighted:{type:Boolean}}}renderListElements(e){if(e.length!==0)return console.log(e),e.map(t=>{}).join("")}renderIncludedExcludedList(){const e=this.listElements.split("|"),t=e[0].split(";"),c=e[1].split(";");console.log("included",t,"excluded",c);const p=t.map(g=>l`
+    </svg>`});this.variant="primary",this.listElements="",this.currency="£",this.hideCta=!1,this.hasRoundedCorners=!1,this.highlighted=!1}static get styles(){return[S]}static get properties(){return{variant:{type:String},listElements:{type:String},currency:{type:String},hideCta:{type:Boolean},hasRoundedCorners:{type:Boolean},highlighted:{type:Boolean}}}renderListElements(e){if(e.length!==0)return console.log(e),e.map(t=>{}).join("")}renderIncludedExcludedList(){const e=this.listElements.split("|"),t=e[0].split(";"),c=e[1].split(";");console.log("included",t,"excluded",c);const d=t.map(g=>r`
         <li class="mb-6 flex items-center">
           ${this.svgIcons.check}
           <span class="ml-2 text-sm text-[var(--membership-primary)]"
             >${g}</span
           >
         </li>
-      `),i=c.map(g=>l` <li class="mb-6 flex items-center">
+      `),a=c.map(g=>r` <li class="mb-6 flex items-center">
         ${this.svgIcons.cross}
         <span class="ml-2 text-sm text-[var(--membership-secondary)]"
           >${g}</span
         >
-      </li>`);return[p,i]}renderMostPopular(){const e={"rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none":this.hasRoundedCorners,"bg-[var(--membership-secondary)]":this.highlighted},t={"rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none p-2":this.hasRoundedCorners};return l` <div
+      </li>`);return[d,a]}renderMostPopular(){const e={"rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none":this.hasRoundedCorners,"bg-[var(--membership-secondary)]":this.highlighted},t={"rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none p-2":this.hasRoundedCorners};return r` <div
       class="${u(e)} relative -top-8 left-1/2 inline-flex -translate-x-1/2 -translate-y-1/2 transform items-center justify-center"
     >
       <div
@@ -511,7 +511,7 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
       >
         Most Popular
       </div>
-    </div>`}renderPrimaryTemplate(){const e=this.listElements.split(";");return l`
+    </div>`}renderPrimaryTemplate(){const e=this.listElements.split(";");return r`
       <div
         class="mx-auto mt-16 max-w-2xl rounded-[var(--membership-border-radius)] ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none"
       >
@@ -535,7 +535,7 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
             role="list"
             class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
           >
-            ${e.map(t=>l`
+            ${e.map(t=>r`
                 <li class="flex gap-x-3">
                   <svg
                     class="h-6 w-5 flex-none text-[var(--membership-primary)] text-indigo-600"
@@ -575,7 +575,7 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
                         ><slot name="price"></slot
                       ></span>
                     </p>
-                       ${this.hideCta?"":l` <slot name="cta"></slot>`}
+                       ${this.hideCta?"":r` <slot name="cta"></slot>`}
                     <p class="mt-6 text-xs leading-5 text-gray-600">
                       <slot name="price-footer"></slot>
                     </p>
@@ -585,11 +585,11 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
           
       </div>
 
-        </div>`}renderSecondaryTemplate(){const e={"bg-[var(--membership-theme)]":this.highlighted,"bg-[var(--membership-bg)]":!this.highlighted,"rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none":this.hasRoundedCorners,"z-0 relative":this.highlighted};return l` <div class="mb-[var(--margin-bottom)] w-full lg:-mr-2">
+        </div>`}renderSecondaryTemplate(){const e={"bg-[var(--membership-theme)]":this.highlighted,"bg-[var(--membership-bg)]":!this.highlighted,"rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none":this.hasRoundedCorners,"z-0 relative":this.highlighted};return r` <div class="mb-[var(--margin-bottom)] w-full lg:-mr-2">
       <div
         class="${u(e)} mx-auto max-w-sm border border-gray-100 pb-20 pl-5 pr-8 pt-6 lg:pb-8"
       >
-        ${this.highlighted?this.renderMostPopular():H}
+        ${this.highlighted?this.renderMostPopular():W}
 
         <span class="mb-2 block text-sm font-semibold text-gray-400"
           ><slot name="kicker">SILVER</slot></span
@@ -609,7 +609,7 @@ var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configura
           <slot name="footer"></slot>
         </div>
       </div>
-    </div>`}render(){if(this.variant==="primary")return this.renderPrimaryTemplate();if(this.variant==="secondary")return this.renderSecondaryTemplate()}}customElements.define("ds-tw-membership",N);function U(n){let s,e,t,c='<div slot="header"></div> <div slot="body"><p></p></div>',p,i,g=`<span slot="title">Packages</span> <span slot="body"><p>At LC Photography, we offer three luxurious wedding package options - Silver, Gold, and
+    </div>`}render(){if(this.variant==="primary")return this.renderPrimaryTemplate();if(this.variant==="secondary")return this.renderSecondaryTemplate()}}customElements.define("ds-tw-membership",N);function O(i){let s,e,t,c='<div slot="header"></div> <div slot="body"><p></p></div>',d,a,g=`<span slot="title">Packages</span> <span slot="body"><p>At LC Photography, we offer three luxurious wedding package options - Silver, Gold, and
 			Platinum - each tailored to meet your unique needs and desires, with varying levels of
 			coverage, editing, and print products to ensure every moment is captured and cherished.</p> <p>Photography Pre wedding Post wedding Albums Mini albums Digital album High resolution photos.</p></span> <span slot="header">Subscription</span> <span slot="header-bold">Plans</span> <span slot="sub-header">Choose</span> <span slot="memberships"><ds-tw-membership hidecta="" listelements="Pre-wedding planning meeting in person or on-line; Coverage, from 2 hours pre-service to 2 hours post first dance;
 Selection of edited images;
@@ -626,7 +626,16 @@ Engagement session from £300;
 Engagement session;
 Additional hour of coverage pre or post service;
 Additional copy of a wedding album;
-+£100 per extra hour"><span slot="title">Platinum</span> <span slot="body"></span> <span slot="list-title">What&#39;s included</span> <span slot="price">£1,299</span> <span slot="price-footer"></span></ds-tw-membership></span>`,v,a,z=`<span slot="kicker">Sint amet magna</span> <span slot="header">Ullamco officia commodo cupidatat sint ad.</span> <span slot="body">Sint laborum id incididunt fugiat ipsum incididunt excepteur nostrud dolore est consectetur enim
-		excepteur. Deserunt veniam magna voluptate in voluptate. Ad ut sint tempor ea quis deserunt.
-		Labore irure incididunt laboris ex do eu dolor mollit fugiat adipisicing minim.
-		<div><br/> <ds-tw-button variant="primary-2" link="#" hasarrow="">Sint laborum</ds-tw-button></div></span> <span slot="buttons"><ds-tw-button link="#">Enquire</ds-tw-button></span>`;return{c(){s=x("meta"),e=y(),t=x("ds-tw-band"),t.innerHTML=c,p=y(),i=x("ds-tw-pricing"),i.innerHTML=g,v=y(),a=x("ds-tw-feature"),a.innerHTML=z,this.h()},l(r){const o=I("svelte-11yaft7",document.head);s=w(o,"META",{name:!0,content:!0}),o.forEach(m),e=k(r),t=w(r,"DS-TW-BAND",{variant:!0,height:!0,"to-center":!0,bgImage:!0,skew:!0,"data-svelte-h":!0}),C(t)!=="svelte-nyngxl"&&(t.innerHTML=c),p=k(r),i=w(r,"DS-TW-PRICING",{variant:!0,"data-svelte-h":!0}),C(i)!=="svelte-kgfsd4"&&(i.innerHTML=g),v=k(r),a=w(r,"DS-TW-FEATURE",{image:!0,variant:!0,skew:!0,"data-svelte-h":!0}),C(a)!=="svelte-1dirdkq"&&(a.innerHTML=z),this.h()},h(){document.title="Pricing",M(s,"name","description"),M(s,"content","About this app"),d(t,"variant","primary"),d(t,"height","400"),d(t,"to-center",""),d(t,"bgImage","images/banner3.jpg"),d(t,"skew",""),d(i,"variant","primary"),d(a,"image","images/banner2.jpg"),d(a,"variant","primary"),d(a,"skew","")},m(r,o){B(document.head,s),h(r,e,o),h(r,t,o),h(r,p,o),h(r,i,o),h(r,v,o),h(r,a,o)},p:f,i:f,o:f,d(r){r&&(m(e),m(t),m(p),m(i),m(v),m(a)),m(s)}}}class Z extends j{constructor(s){super(),P(this,s,null,U,E,{})}}export{Z as component,X as universal};
++£100 per extra hour"><span slot="title">Platinum</span> <span slot="body"></span> <span slot="list-title">What&#39;s included</span> <span slot="price">£1,299</span> <span slot="price-footer"></span></ds-tw-membership></span>`,v,n,z=`<span slot="kicker">Capture the Magic Before the Big Day</span> <span slot="header">Discover the Charm and Intimacy of Pre-Wedding Photography Sessions</span> <span slot="body"><p>Pre-wedding sessions, also known as engagement shoots, offer couples a unique opportunity to
+			capture their love story before the big day. These sessions are a relaxed and enjoyable way to
+			get comfortable in front of the camera, allowing you to showcase your personalities and
+			relationship in a more informal setting. Our experienced photographers will guide you through
+			various poses and locations, ensuring that each moment is beautifully captured. Whether you
+			prefer a romantic sunset at the beach, a stroll through a picturesque park, or an urban
+			adventure in the city, we tailor each session to reflect your unique style and love story.</p> <p>During a pre-wedding session, we focus on capturing candid moments and genuine emotions that
+			highlight the bond between you and your partner. These photos not only serve as a beautiful
+			memento but also provide a great opportunity to experiment with different looks and poses that
+			you might want to incorporate on your wedding day. The images from your pre-wedding session
+			can be used for save-the-dates, wedding invitations, or as decor at your wedding reception.
+			Our goal is to create a fun and memorable experience that results in stunning photos you&#39;ll
+			cherish forever, setting the perfect tone for your upcoming nuptials.</p> <div><br/> <ds-tw-button variant="primary-2" link="#" hasarrow=""></ds-tw-button></div></span> <span slot="buttons"><ds-tw-button link="#">Enquire</ds-tw-button></span>`;return{c(){s=x("meta"),e=y(),t=x("ds-tw-band"),t.innerHTML=c,d=y(),a=x("ds-tw-pricing"),a.innerHTML=g,v=y(),n=x("ds-tw-feature"),n.innerHTML=z,this.h()},l(l){const o=I("svelte-11yaft7",document.head);s=w(o,"META",{name:!0,content:!0}),o.forEach(p),e=k(l),t=w(l,"DS-TW-BAND",{variant:!0,height:!0,"to-center":!0,bgImage:!0,skew:!0,"data-svelte-h":!0}),C(t)!=="svelte-lpwa5l"&&(t.innerHTML=c),d=k(l),a=w(l,"DS-TW-PRICING",{variant:!0,"data-svelte-h":!0}),C(a)!=="svelte-kgfsd4"&&(a.innerHTML=g),v=k(l),n=w(l,"DS-TW-FEATURE",{image:!0,variant:!0,"data-svelte-h":!0}),C(n)!=="svelte-q7vkm0"&&(n.innerHTML=z),this.h()},h(){document.title="Pricing",M(s,"name","description"),M(s,"content","About this app"),m(t,"variant","primary"),m(t,"height","400"),m(t,"to-center",""),m(t,"bgImage","images/slider-1.jpg"),m(t,"skew",""),m(a,"variant","primary"),m(n,"image","images/wedding-photography-sessions.jpg"),m(n,"variant","primary")},m(l,o){B(document.head,s),h(l,e,o),h(l,t,o),h(l,d,o),h(l,a,o),h(l,v,o),h(l,n,o)},p:b,i:b,o:b,d(l){l&&(p(e),p(t),p(d),p(a),p(v),p(n)),p(s)}}}class Z extends E{constructor(s){super(),j(this,s,null,O,P,{})}}export{Z as component,X as universal};
