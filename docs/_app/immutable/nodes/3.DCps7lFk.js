@@ -1,11 +1,11 @@
-import{d as S}from"../chunks/index.R8ovVqwX.js";import{s as T,n as u}from"../chunks/scheduler.Bmg8oFKD.js";import{S as j,i as $,e as g,s as f,A as F,c as v,d as n,f as b,y as x,o as y,z as m,h as C,g as p}from"../chunks/index.ClnunyA3.js";import{s as k,T as _,x as o,i as E,c as q,d as w,r as H,a as z}from"../chunks/class-map.-4MMyoZd.js";import"../chunks/ds-tw-band.DrOMmQV_.js";const A=S,D=!0,J=Object.freeze(Object.defineProperty({__proto__:null,csr:A,prerender:D},Symbol.toStringTag,{value:"Module"}));function O(d,e,r){const t={personalizations:[{to:[{email:r.email}],from:{email:"lukas4net@gmail.com"},subject:r.subject,content:[{type:"text/plain",value:r.content}]}]};console.log("Sending email",e,t),fetch(d,{method:"POST",headers:e,body:JSON.stringify(t)}).then(a=>a.json()).then(a=>console.log(a)).catch(a=>console.error("Error:",a))}class W extends k{static get styles(){return[_]}static get properties(){return{image:{type:String},variant:{type:String},addHiddenField:{type:String},title:{type:String},messageText:{type:String},message:{type:String}}}constructor(){super(),this.image="",this.variant="primary",this.addHiddenField="",this.message="",this.messageText="Form submitted"}handleSubmit(e){e.preventDefault();const r=e.target,t=new FormData(r),a=Object.fromEntries(t.entries());console.log("Form data: ",a),this.message=this.messageText,O("https://0qxzrs8b9e.execute-api.eu-west-2.amazonaws.com/dev/mailfwd",{Accept:"application/json; charset=utf-8","Content-Type":"application/json; charset=UTF-8"},a)}createHiddenField(e){return o`<label for="details">
+import{d as T}from"../chunks/index.R8ovVqwX.js";import{s as $,n as h}from"../chunks/scheduler.Bmg8oFKD.js";import{S as j,i as C,e as g,s as b,A as F,c as v,d,f as x,y,o as w,z as c,h as B,g as u}from"../chunks/index.ClnunyA3.js";import{s as _,T as S,x as l,i as E,e as p,d as k,r as H,a as W}from"../chunks/class-map.4yN0Eo_Y.js";import"../chunks/ds-tw-band.CmcJkru6.js";const D=T,q=!0,J=Object.freeze(Object.defineProperty({__proto__:null,csr:D,prerender:q},Symbol.toStringTag,{value:"Module"}));function A(m,e,t){const a={email:t.email,name:t.full_name,number:t.phonenumber,content:t.message};fetch(m,{method:"POST",headers:e,body:JSON.stringify(a)}).then(s=>s.json()).then(s=>console.log(s)).catch(s=>console.error("Error:",s))}class M extends _{static get styles(){return[S]}static get properties(){return{image:{type:String},variant:{type:String},addHiddenField:{type:String},title:{type:String},messageText:{type:String},message:{type:String},url:{type:String}}}constructor(){super(),this.image="",this.variant="primary",this.addHiddenField="",this.message="",this.messageText="Form submitted",this.url=""}handleSubmit(e){if(e.preventDefault(),!this.url)return!1;const t=e.target;console.log("form",t);const a=new FormData(t),s=Object.fromEntries(a.entries());console.log("data",s),this.message=this.messageText;const n=this.url;A(n,{Accept:"application/json; charset=utf-8","Content-Type":"application/json; charset=UTF-8"},s)}createHiddenField(e){return l`<label for="details">
       <input
         type="hidden"
         name="details"
         id="details"
         .value=${JSON.stringify({key:e})}
       />
-    </label>`}addClasses(){const e=[];return this.variant=="primary"&&e.push("bg-[var(--form-bg)] text-[var(--form-text)] shadow-lg px-6 pb-[var(--margin-bottom)] pt-[var(--margin-bottom)]"),this.variant=="secondary"&&e.push("pb-[var(--margin-bottom)]"),e.join(" ")}render(){return o` <div
+    </label>`}addClasses(){const e=[];return this.variant=="primary"&&e.push("bg-[var(--form-bg)] text-[var(--form-text)] shadow-lg px-6 pb-[var(--margin-bottom)] pt-[var(--margin-bottom)]"),this.variant=="secondary"&&e.push("pb-[var(--margin-bottom)]"),e.join(" ")}render(){return l` <div
       class="${this.addClasses()} mb-[var(--margin-bottom)] block items-center justify-center rounded-md text-sm transition-all duration-200 ease-in-out"
     >
       <form
@@ -86,10 +86,11 @@ import{d as S}from"../chunks/index.R8ovVqwX.js";import{s as T,n as u}from"../chu
         </label>
 
         ${this.addHiddenField!=""?this.createHiddenField(this.addHiddenField):""}
-        ${this.message!=""?o`<div class="text-[var(--form-bg-text)] text-red-500">
+        ${this.message!=""?l`<div class="text-[var(--form-bg-text)] text-red-500">
               ${this.message}
             </div>`:""}
 
+        <!-- <ds-tw-button @click=${this.handleSubmit}> Submit </ds-tw-button> -->
         <button
           type="submit"
           class="mt-5 rounded-md bg-[var(--form-button-bg)] py-3 text-[var(--form-button-text)] hover:bg-[var(--form-button-bg-hover)] hover:text-[var(--form-button-text-hover)]  group-invalid:pointer-events-none group-invalid:opacity-30 sm:w-full"
@@ -97,19 +98,19 @@ import{d as S}from"../chunks/index.R8ovVqwX.js";import{s as T,n as u}from"../chu
           Submit
         </button>
       </form>
-    </div>`}}customElements.define("ds-tw-contact-form",W);class L extends k{static get styles(){return[_,E`
+    </div>`}}customElements.define("ds-tw-contact-form",M);class O extends _{static get styles(){return[S,E`
         :host {
           --skew-bg: var(--cta-bg);
         }
-      `]}static get properties(){return{image:{type:String},variant:{type:String},fullWidth:{type:Boolean},skew:{type:String}}}constructor(){super(),this.image="",this.variant="primary",this.fullWidth=!1,this.skew="none"}renderTemplate(){if(this.variant=="primary"){const e={"flex items-center justify-center mx-auto":!0,"max-w-[var(--container-width)]":!this.fullWidth};return o`
-        <div class="bg-[var(--cta-bg)]">
-          <div class="${q(e)} container">
+      `]}static get properties(){return{image:{type:String},variant:{type:String},fullWidth:{type:Boolean},skew:{type:String},showGradient:{type:Boolean},marginBottom:{type:Boolean}}}constructor(){super(),this.image="",this.variant="primary",this.fullWidth=!1,this.skew="none",this.showGradient=!1,this.marginBottom=!1}renderTemplate(){const e={"mb-[var(--margin-bottom)]":this.marginBottom};if(this.variant=="primary"){const t={"flex items-center justify-center mx-auto":!0,"max-w-[var(--container-width)]":!this.fullWidth};return l`
+        <div class="${p(e)} bg-[var(--cta-bg)]">
+          <div class="${p(t)} container">
             <div
               class="w-full overflow-hidden rounded-[var(--cta-border-radius)] text-gray-500"
             >
               <div class="w-full lg:flex">
                 <div
-                  class="block bg-[var(--cta-bg-left)] px-10 py-10 text-2xl text-[var(--cta-text)] lg:w-1/2"
+                  class="block bg-[var(--cta-bg-left)] px-10 py-10 text-[var(--cta-text)] lg:w-1/2"
                 >
                   <slot name="left"></slot>
                 </div>
@@ -122,67 +123,67 @@ import{d as S}from"../chunks/index.R8ovVqwX.js";import{s as T,n as u}from"../chu
             </div>
           </div>
         </div>
-      `}if(this.variant=="secondary")return o`
-        <div class="bg-inherit">
-          <div
-            class="${this.fullWidth?w:"max-w-[var(--container-width)]"} mx-auto sm:px-6 lg:px-8"
-          >
+      `}if(this.variant=="secondary"){const t={"max-w-[var(--container-width)]":!this.fullWidth};return l`
+        <div class="${p(e)} bg-inherit">
+          <div class="${p(t)} mx-auto">
             <div
-              class="relative isolate mb-[var(--margin-bottom)] overflow-hidden rounded-[var(--cta-border-radius)] bg-[var(--cta-bg)] p-4 pt-16 dark:bg-slate-500 sm:px-16 lg:flex lg:gap-x-10 lg:px-24 lg:pt-0 lg:pt-24"
+              class="relative isolate overflow-hidden rounded-[var(--cta-border-radius)] bg-[var(--cta-bg)] p-4 pt-16 dark:bg-slate-500 sm:px-16  lg:gap-x-10 lg:px-24 lg:pb-24 lg:pt-24"
             >
-              <svg
-                viewBox="0 0 1024 1024"
-                class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
-                aria-hidden="true"
-              >
-                <circle
-                  cx="512"
-                  cy="512"
-                  r="512"
-                  fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
-                  fill-opacity="0.5"
-                />
-                <defs>
-                  <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-                    <stop stop-color="bg-[var(--cta-bg)]" />
-                    <stop offset="1" stop-color="white" />
-                  </radialGradient>
-                </defs>
-              </svg>
-              <div
-                class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left"
-              >
-                <h2
-                  class="text-3xl font-bold tracking-tight text-[var(--cta-text)] sm:text-4xl"
-                >
-                  <slot name="title"></slot>
-                </h2>
-                <p class="mt-6 text-lg leading-8 text-[var(--cta-text)]">
-                  <slot name="body"></slot>
-                </p>
+              ${this.showGradient?l` <svg
+                    viewBox="0 0 1024 1024"
+                    class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,var(--cta-primary),transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                    aria-hidden="true"
+                  >
+                    <circle
+                      cx="512"
+                      cy="512"
+                      r="512"
+                      fill="url(#18cc2-kkkd)"
+                      fill-opacity="0.5"
+                    />
+                    <defs>
+                      <radialGradient id="18cc2-kkkd">
+                        <stop stop-color="var(--cta-primary)" />
+                        <stop offset="1" stop-color="var(--cta-secondary)" />
+                      </radialGradient>
+                    </defs>
+                  </svg>`:k}
+              <div class="container lg:flex">
                 <div
-                  class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"
+                  class=" mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left"
                 >
-                  <slot name="buttons"></slot>
+                  <h2
+                    class="text-3xl font-bold tracking-tight text-[var(--cta-text)] sm:text-4xl"
+                  >
+                    <slot name="title"></slot>
+                  </h2>
+                  <p class="mt-6 text-lg leading-8 text-[var(--cta-text)]">
+                    <slot name="body"></slot>
+                  </p>
+                  <div
+                    class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"
+                  >
+                    <slot name="buttons"></slot>
+                  </div>
+                  <div class="text-[var(--cta-text)]">
+                    <slot name="left"></slot>
+                  </div>
                 </div>
-                <div class="text-[var(--cta-text)]">
-                  <slot name="left"></slot>
+                <div class="relative w-full">
+                  <slot name="right"></slot>
+                  ${this.image?l` <img
+                        class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                        src="${this.image}"
+                        alt="App screenshot"
+                        width="1824"
+                        height="1080"
+                      />`:k}
                 </div>
-              </div>
-              <div class="relative mt-16 w-full lg:mt-8">
-                <slot name="right"></slot>
-                ${this.image?o` <img
-                      class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-                      src="${this.image}"
-                      alt="App screenshot"
-                      width="1824"
-                      height="1080"
-                    />`:w}
               </div>
             </div>
           </div>
         </div>
-      `;if(this.variant=="sign-in-1")return o` <section class="relative overflow-hidden py-20 2xl:py-10">
+      `}if(this.variant=="sign-in-1")return l` <section class="relative overflow-hidden py-20 2xl:py-10">
         <div class="container mx-auto px-4">
           <div class="mx-auto max-w-7xl">
             <div class="-mx-4 flex flex-wrap">
@@ -215,42 +216,23 @@ import{d as S}from"../chunks/index.R8ovVqwX.js";import{s as T,n as u}from"../chu
               </div>
               <div class="mb-16 w-full px-4 lg:mb-0 lg:w-1/2">
                 <div
-                  class="mx-auto max-w-lg lg:pb-8 lg:pt-8 2xl:mr-0 2xl:pt-24"
+                  class="mx-auto max-w-lg lg:pb-8 lg:pt-8 2xl:mr-0 2xl:pb-24 2xl:pt-24"
                 >
                   <h3
                     class="mb-4 text-5xl font-bold text-[var(--cta-theme)] sm:text-6xl"
                   >
-                    Open an account
+                    <slot name="header"></slot>
                   </h3>
                   <p class="mb-12 text-lg text-gray-500">
                     <slot name="right"></slot>
                   </p>
 
                   <div class="-mx-2 mb-6 flex flex-wrap items-center">
-                    <div class="mb-3 w-full px-2 lg:mb-0 lg:w-1/2">
-                      <a
-                        class="inline-flex w-full items-center justify-center rounded-full border border-gray-200 px-4 py-3 transition duration-100 hover:border-gray-400"
-                        href="#"
-                      >
-                        <img src="static/icons/facebook.svg" alt="" />
-                        <span class="ml-4 text-sm font-semibold text-gray-500"
-                          >Login with Facebook</span
-                        >
-                      </a>
-                    </div>
-                    <div class="w-full px-2 lg:w-1/2">
-                      <a
-                        class="inline-flex w-full items-center justify-center rounded-full border border-gray-200 px-4 py-3 transition duration-100 hover:border-gray-400"
-                        href="#"
-                      >
-                        <img src="static/icons/apple.svg" alt="" />
-                        <span class="ml-4 text-sm font-semibold text-gray-500"
-                          >Login with Apple</span
-                        >
-                      </a>
+                    <div class="mb-3 w-full px-2">
+                      <slot name="buttons"></slot>
                     </div>
                   </div>
-                  <slot name="buttons"></slot>
+
                   <div class="mb-6 flex items-center">
                     <div class="h-px w-full bg-gray-300"></div>
                     <span class="mx-4 text-sm font-semibold text-gray-500"
@@ -328,11 +310,11 @@ import{d as S}from"../chunks/index.R8ovVqwX.js";import{s as T,n as u}from"../chu
             </div>
           </div>
         </div>
-      </section>`}render(){return o`${H(this.skew)}${this.renderTemplate()}${z(this.skew)}`}}customElements.define("ds-tw-cta",L);function P(d){let e,r,t,a='<div slot="header"></div> <div slot="body"><p></p></div>',c,l,h=`<span slot="left"><p>I am passionate about capturing the love and magic of your special day. That&#39;s why we&#39;d love
+      </section>`}render(){return l`${H(this.skew)}${this.renderTemplate()}${W(this.skew)}`}}customElements.define("ds-tw-cta",O);function P(m){let e,t,a,s='<div slot="header"></div> <div slot="body"><p></p></div>',n,o,f=`<span slot="left"><p>I am passionate about capturing the love and magic of your special day. That&#39;s why we&#39;d love
 			to hear from you! Whether you&#39;re looking for information on our services, pricing, or
 			availability, please don&#39;t hesitate to reach out. Our team is dedicated to providing
 			exceptional customer service and ensuring that every couple feels valued and cared for
 			throughout their wedding journey.</p> <p>To get in touch with us, simply fill out the contact form. I&#39;d be delighted to schedule a
 			consultation to discuss your vision, answer any questions you may have, and share some of our
 			favorite stories from previous weddings. Let&#39;s work together to create unforgettable memories
-			that you&#39;ll treasure for a lifetime!</p></span> <span slot="right"><ds-tw-contact-form title="Contact Form" url="https://hook.eu2.make.com/wg1nk9q1bmwgadg0m127ijuo55bdqeim"></ds-tw-contact-form></span>`;return{c(){e=g("meta"),r=f(),t=g("ds-tw-band"),t.innerHTML=a,c=f(),l=g("ds-tw-cta"),l.innerHTML=h,this.h()},l(s){const i=F("svelte-1b8d7sl",document.head);e=v(i,"META",{name:!0,content:!0}),i.forEach(n),r=b(s),t=v(s,"DS-TW-BAND",{variant:!0,height:!0,"to-center":!0,bgImage:!0,skew:!0,"data-svelte-h":!0}),x(t)!=="svelte-nyngxl"&&(t.innerHTML=a),c=b(s),l=v(s,"DS-TW-CTA",{"data-svelte-h":!0}),x(l)!=="svelte-117xxu9"&&(l.innerHTML=h),this.h()},h(){document.title="Contact",y(e,"name","description"),y(e,"content","About this app"),m(t,"variant","primary"),m(t,"height","400"),m(t,"to-center",""),m(t,"bgImage","images/banner3.jpg"),m(t,"skew","")},m(s,i){C(document.head,e),p(s,r,i),p(s,t,i),p(s,c,i),p(s,l,i)},p:u,i:u,o:u,d(s){s&&(n(r),n(t),n(c),n(l)),n(e)}}}class R extends j{constructor(e){super(),$(this,e,null,P,T,{})}}export{R as component,J as universal};
+			that you&#39;ll treasure for a lifetime!</p></span> <span slot="right"><ds-tw-contact-form title="Contact Form" url="https://hook.eu2.make.com/wg1nk9q1bmwgadg0m127ijuo55bdqeim"></ds-tw-contact-form></span>`;return{c(){e=g("meta"),t=b(),a=g("ds-tw-band"),a.innerHTML=s,n=b(),o=g("ds-tw-cta"),o.innerHTML=f,this.h()},l(r){const i=F("svelte-1b8d7sl",document.head);e=v(i,"META",{name:!0,content:!0}),i.forEach(d),t=x(r),a=v(r,"DS-TW-BAND",{variant:!0,height:!0,"to-center":!0,bgImage:!0,skew:!0,"data-svelte-h":!0}),y(a)!=="svelte-nyngxl"&&(a.innerHTML=s),n=x(r),o=v(r,"DS-TW-CTA",{"data-svelte-h":!0}),y(o)!=="svelte-117xxu9"&&(o.innerHTML=f),this.h()},h(){document.title="Contact",w(e,"name","description"),w(e,"content","About this app"),c(a,"variant","primary"),c(a,"height","400"),c(a,"to-center",""),c(a,"bgImage","images/banner3.jpg"),c(a,"skew","")},m(r,i){B(document.head,e),u(r,t,i),u(r,a,i),u(r,n,i),u(r,o,i)},p:h,i:h,o:h,d(r){r&&(d(t),d(a),d(n),d(o)),d(e)}}}class U extends j{constructor(e){super(),C(this,e,null,P,$,{})}}export{U as component,J as universal};

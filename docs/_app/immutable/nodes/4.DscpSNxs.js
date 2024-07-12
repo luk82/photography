@@ -1,4 +1,4 @@
-var _=Object.defineProperty;var T=(n,s,e)=>s in n?_(n,s,{enumerable:!0,configurable:!0,writable:!0,value:e}):n[s]=e;var w=(n,s,e)=>T(n,typeof s!="symbol"?s+"":s,e);import{d as $}from"../chunks/index.R8ovVqwX.js";import{s as E,n as f}from"../chunks/scheduler.Bmg8oFKD.js";import{S as j,i as P,e as v,s as b,A as I,c as x,d as m,f as y,y as k,o as M,z as d,h as A,g as u}from"../chunks/index.ClnunyA3.js";import{s as S,T as L,i as B,x as l,r as R,a as q,c as C,d as D}from"../chunks/class-map.-4MMyoZd.js";import"../chunks/ds-tw-band.DrOMmQV_.js";import"../chunks/ds-tw-feature.B5MM9d64.js";const H=$,W=!0,X=Object.freeze(Object.defineProperty({__proto__:null,csr:H,prerender:W},Symbol.toStringTag,{value:"Module"}));class G extends S{constructor(){super();w(this,"svgIcons",{check:l`<svg
+var L=Object.defineProperty;var $=(n,s,e)=>s in n?L(n,s,{enumerable:!0,configurable:!0,writable:!0,value:e}):n[s]=e;var b=(n,s,e)=>$(n,typeof s!="symbol"?s+"":s,e);import{d as T}from"../chunks/index.R8ovVqwX.js";import{s as E,n as f}from"../chunks/scheduler.Bmg8oFKD.js";import{S as j,i as P,e as x,s as y,A as I,c as w,d as m,f as k,y as C,o as M,z as d,h as B,g as h}from"../chunks/index.ClnunyA3.js";import{s as _,T as S,i as A,x as l,e as u,r as R,a as q,d as H}from"../chunks/class-map.4yN0Eo_Y.js";import"../chunks/ds-tw-band.CmcJkru6.js";import"../chunks/ds-tw-feature.CeDHFY95.js";const W=T,D=!0,X=Object.freeze(Object.defineProperty({__proto__:null,csr:W,prerender:D},Symbol.toStringTag,{value:"Module"}));class G extends _{constructor(){super();b(this,"svgIcons",{check:l`<svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       version="1.1"
@@ -56,11 +56,11 @@ var _=Object.defineProperty;var T=(n,s,e)=>s in n?_(n,s,{enumerable:!0,configura
           transform=" matrix(0.707 -0.7072 0.7072 0.707 -18.6396 45.0055) "
         />
       </g>
-    </svg>`});this.variant="primary",this.hasRoundedCorners=!1,this.skew="none"}static get styles(){return[L,B`
+    </svg>`});this.variant="primary",this.hasRoundedCorners=!1,this.skew="none",this._yearly=!1,this._monthly=!0,this.savings=10}static get styles(){return[S,A`
         :host {
           --skew-bg: var(--pricing-bg);
         }
-      `]}static get properties(){return{variant:{type:String},hasRoundedCorners:{type:Boolean},skew:{type:String}}}renderListItems(e,t){const c=e.map(i=>l`
+      `]}static get properties(){return{variant:{type:String},hasRoundedCorners:{type:Boolean},skew:{type:String},_yearly:{type:Boolean},_montly:{type:Boolean},savings:{type:Number}}}renderListItems(e,t){const c=e.map(i=>l`
         <li class="mb-6 flex items-center">
           ${this.svgIcons.check}
           <span class="ml-2 text-sm text-[var(--pricing-primary)]"
@@ -72,45 +72,29 @@ var _=Object.defineProperty;var T=(n,s,e)=>s in n?_(n,s,{enumerable:!0,configura
         <span class="ml-2 text-sm text-[var(--pricing-secondary)]"
           >${i}</span
         >
-      </li>`);return[c,p]}renderTemplate(){if(this.variant=="secondary")return l`<section>
-        <div class="skew skew-top mr-for-radius">
-          <svg
-            class="h-8 w-full text-gray-50 md:h-12 lg:h-20"
-            viewbox="0 0 10 10"
-            preserveaspectratio="none"
-          >
-            <polygon fill="currentColor" points="0 0 10 10 0 10"></polygon>
-          </svg>
-        </div>
-        <div class="skew skew-top ml-for-radius">
-          <svg
-            class="h-8 w-full text-gray-50 md:h-12 lg:h-20"
-            viewbox="0 0 10 10"
-            preserveaspectratio="none"
-          >
-            <polygon fill="currentColor" points="0 10 10 0 10 10"></polygon>
-          </svg>
-        </div>
-        <div class="radius-for-skewed bg-gray-50 py-20">
+      </li>`);return[c,p]}renderTemplate(){if(this.variant=="secondary"){const e={"bg-[var(--pricing-primary)]":this._yearly},t={"bg-[var(--pricing-primary)]":this._monthly};return l`<section>
+        <div class="bg-[var(--pricing-bg)] py-20">
           <div class="container mx-auto px-4">
             <div class="mx-auto mb-16 max-w-2xl text-center">
               <span class="font-bold text-[var(--pricing-primary)]"
-                >Dolor sit amet consectutar</span
-              >
+                ><slot name="kicker"></slot
+              ></span>
               <h2 class="font-heading mb-2 text-4xl font-bold lg:text-5xl">
-                Choose your best plan
+                <slot name="header"></slot>
               </h2>
               <p class="mb-6 text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <slot name="sub-header"></slot>
               </p>
               <div class="inline-block rounded-lg bg-white px-1 py-1">
                 <button
-                  class="mr-1 px-4 py-2 text-sm font-bold text-gray-500 hover:text-gray-900"
+                  @click="${()=>{this._yearly=!this._yearly,this._monthly=!this._monthly}}"
+                  class="${u(t)} mr-1 rounded-lg  px-4 py-2 text-sm font-bold hover:text-gray-900"
                 >
                   Monthly
                 </button>
                 <button
-                  class="rounded-lg bg-gray-50 px-4 py-2 text-sm font-bold text-gray-900 shadow"
+                  @click="${()=>{this._yearly=!this._yearly,this._monthly=!this._monthly}}"
+                  class="${u(e)} rounded-lg  px-4 py-2 text-sm font-bold"
                 >
                   Yearly
                 </button>
@@ -402,25 +386,7 @@ var _=Object.defineProperty;var T=(n,s,e)=>s in n?_(n,s,{enumerable:!0,configura
             </div>
           </div>
         </div>
-        <div class="skew skew-bottom mr-for-radius">
-          <svg
-            class="h-8 w-full text-gray-50 md:h-12 lg:h-20"
-            viewbox="0 0 10 10"
-            preserveaspectratio="none"
-          >
-            <polygon fill="currentColor" points="0 0 10 0 0 10"></polygon>
-          </svg>
-        </div>
-        <div class="skew skew-bottom ml-for-radius">
-          <svg
-            class="h-8 w-full text-gray-50 md:h-12 lg:h-20"
-            viewbox="0 0 10 10"
-            preserveaspectratio="none"
-          >
-            <polygon fill="currentColor" points="0 0 10 0 10 10"></polygon>
-          </svg>
-        </div>
-      </section>`;if(this.variant=="primary")return l`<div class="bg-white py-24 sm:py-32">
+      </section>`}if(this.variant=="primary")return l`<div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-[var(--container-width)] px-6 lg:px-8">
           <div class="mx-auto max-w-2xl sm:text-center">
             <h2
@@ -467,7 +433,7 @@ var _=Object.defineProperty;var T=(n,s,e)=>s in n?_(n,s,{enumerable:!0,configura
             </div>
           </div>
         </div>
-      </section>`}render(){return l`${R(this.skew)}${this.renderTemplate()}${q(this.skew)}`}}customElements.define("ds-tw-pricing",G);class N extends S{constructor(){super();w(this,"svgIcons",{check:l`<svg
+      </section>`}render(){return l`${R(this.skew)}${this.renderTemplate()}${q(this.skew)}`}}customElements.define("ds-tw-pricing",G);class N extends _{constructor(){super();b(this,"svgIcons",{check:l`<svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       version="1.1"
@@ -525,7 +491,7 @@ var _=Object.defineProperty;var T=(n,s,e)=>s in n?_(n,s,{enumerable:!0,configura
           transform=" matrix(0.707 -0.7072 0.7072 0.707 -18.6396 45.0055) "
         />
       </g>
-    </svg>`});this.variant="primary",this.listElements="",this.currency="£",this.hideCta=!1,this.hasRoundedCorners=!1,this.highlighted=!1}static get styles(){return[L]}static get properties(){return{variant:{type:String},listElements:{type:String},currency:{type:String},hideCta:{type:Boolean},hasRoundedCorners:{type:Boolean},highlighted:{type:Boolean}}}renderListElements(e){if(e.length!==0)return console.log(e),e.map(t=>{}).join("")}renderIncludedExcludedList(){const e=this.listElements.split("|"),t=e[0].split(";"),c=e[1].split(";");console.log("included",t,"excluded",c);const p=t.map(g=>l`
+    </svg>`});this.variant="primary",this.listElements="",this.currency="£",this.hideCta=!1,this.hasRoundedCorners=!1,this.highlighted=!1}static get styles(){return[S]}static get properties(){return{variant:{type:String},listElements:{type:String},currency:{type:String},hideCta:{type:Boolean},hasRoundedCorners:{type:Boolean},highlighted:{type:Boolean}}}renderListElements(e){if(e.length!==0)return console.log(e),e.map(t=>{}).join("")}renderIncludedExcludedList(){const e=this.listElements.split("|"),t=e[0].split(";"),c=e[1].split(";");console.log("included",t,"excluded",c);const p=t.map(g=>l`
         <li class="mb-6 flex items-center">
           ${this.svgIcons.check}
           <span class="ml-2 text-sm text-[var(--membership-primary)]"
@@ -538,10 +504,10 @@ var _=Object.defineProperty;var T=(n,s,e)=>s in n?_(n,s,{enumerable:!0,configura
           >${g}</span
         >
       </li>`);return[p,i]}renderMostPopular(){const e={"rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none":this.hasRoundedCorners,"bg-[var(--membership-secondary)]":this.highlighted},t={"rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none p-2":this.hasRoundedCorners};return l` <div
-      class="${C(e)} relative -top-8 left-1/2 inline-flex -translate-x-1/2 -translate-y-1/2 transform items-center justify-center"
+      class="${u(e)} relative -top-8 left-1/2 inline-flex -translate-x-1/2 -translate-y-1/2 transform items-center justify-center"
     >
       <div
-        class="${C(t)}  flex-shrink-0 bg-[var(--membership-primary)] px-5 py-4 text-sm font-semibold uppercase text-gray-900"
+        class="${u(t)}  flex-shrink-0 bg-[var(--membership-primary)] px-5 py-4 text-sm font-semibold uppercase text-gray-900"
       >
         Most Popular
       </div>
@@ -589,7 +555,6 @@ var _=Object.defineProperty;var T=(n,s,e)=>s in n?_(n,s,{enumerable:!0,configura
           </ul>
         </div>
 
-        ${this.hideCta?"":l`
               <div
                 class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0"
               >
@@ -610,24 +575,21 @@ var _=Object.defineProperty;var T=(n,s,e)=>s in n?_(n,s,{enumerable:!0,configura
                         ><slot name="price"></slot
                       ></span>
                     </p>
-                    <a
-                      href="#"
-                      class="mt-10 block w-full rounded-[var(--membership-border-radius)] bg-[var(--membership-theme)] px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                      >Get access</a
-                    >
+                       ${this.hideCta?"":l` <slot name="cta"></slot>`}
                     <p class="mt-6 text-xs leading-5 text-gray-600">
                       <slot name="price-footer"></slot>
                     </p>
                   </div>
                 </div>
               </div>
-            `}
+          
       </div>
-    `}renderSecondaryTemplate(){const e={"bg-[var(--membership-theme)]":this.highlighted,"bg-[var(--membership-bg)]":!this.highlighted,"rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none":this.hasRoundedCorners,"z-0 relative":this.highlighted};return l` <div class="mb-[var(--margin-bottom)] w-full lg:-mr-2">
+
+        </div>`}renderSecondaryTemplate(){const e={"bg-[var(--membership-theme)]":this.highlighted,"bg-[var(--membership-bg)]":!this.highlighted,"rounded-t-3xl lg:rounded-l-3xl lg:rounded-t-none":this.hasRoundedCorners,"z-0 relative":this.highlighted};return l` <div class="mb-[var(--margin-bottom)] w-full lg:-mr-2">
       <div
-        class="${C(e)} mx-auto max-w-sm border border-gray-100 pb-20 pl-5 pr-8 pt-6 lg:pb-8"
+        class="${u(e)} mx-auto max-w-sm border border-gray-100 pb-20 pl-5 pr-8 pt-6 lg:pb-8"
       >
-        ${this.highlighted?this.renderMostPopular():D}
+        ${this.highlighted?this.renderMostPopular():H}
 
         <span class="mb-2 block text-sm font-semibold text-gray-400"
           ><slot name="kicker">SILVER</slot></span
@@ -664,7 +626,7 @@ Engagement session from £300;
 Engagement session;
 Additional hour of coverage pre or post service;
 Additional copy of a wedding album;
-+£100 per extra hour"><span slot="title">Platinum</span> <span slot="body"></span> <span slot="list-title">What&#39;s included</span> <span slot="price">£1,299</span> <span slot="price-footer"></span></ds-tw-membership></span>`,h,a,z=`<span slot="kicker">Sint amet magna</span> <span slot="header">Ullamco officia commodo cupidatat sint ad.</span> <span slot="body">Sint laborum id incididunt fugiat ipsum incididunt excepteur nostrud dolore est consectetur enim
++£100 per extra hour"><span slot="title">Platinum</span> <span slot="body"></span> <span slot="list-title">What&#39;s included</span> <span slot="price">£1,299</span> <span slot="price-footer"></span></ds-tw-membership></span>`,v,a,z=`<span slot="kicker">Sint amet magna</span> <span slot="header">Ullamco officia commodo cupidatat sint ad.</span> <span slot="body">Sint laborum id incididunt fugiat ipsum incididunt excepteur nostrud dolore est consectetur enim
 		excepteur. Deserunt veniam magna voluptate in voluptate. Ad ut sint tempor ea quis deserunt.
 		Labore irure incididunt laboris ex do eu dolor mollit fugiat adipisicing minim.
-		<div><br/> <ds-tw-button variant="primary-2" link="#" hasarrow="">Sint laborum</ds-tw-button></div></span> <span slot="buttons"><ds-tw-button link="#">Enquire</ds-tw-button></span>`;return{c(){s=v("meta"),e=b(),t=v("ds-tw-band"),t.innerHTML=c,p=b(),i=v("ds-tw-pricing"),i.innerHTML=g,h=b(),a=v("ds-tw-feature"),a.innerHTML=z,this.h()},l(r){const o=I("svelte-11yaft7",document.head);s=x(o,"META",{name:!0,content:!0}),o.forEach(m),e=y(r),t=x(r,"DS-TW-BAND",{variant:!0,height:!0,"to-center":!0,bgImage:!0,skew:!0,"data-svelte-h":!0}),k(t)!=="svelte-nyngxl"&&(t.innerHTML=c),p=y(r),i=x(r,"DS-TW-PRICING",{variant:!0,"data-svelte-h":!0}),k(i)!=="svelte-kgfsd4"&&(i.innerHTML=g),h=y(r),a=x(r,"DS-TW-FEATURE",{image:!0,variant:!0,skew:!0,"data-svelte-h":!0}),k(a)!=="svelte-1dirdkq"&&(a.innerHTML=z),this.h()},h(){document.title="Pricing",M(s,"name","description"),M(s,"content","About this app"),d(t,"variant","primary"),d(t,"height","400"),d(t,"to-center",""),d(t,"bgImage","images/banner3.jpg"),d(t,"skew",""),d(i,"variant","primary"),d(a,"image","images/banner2.jpg"),d(a,"variant","primary"),d(a,"skew","")},m(r,o){A(document.head,s),u(r,e,o),u(r,t,o),u(r,p,o),u(r,i,o),u(r,h,o),u(r,a,o)},p:f,i:f,o:f,d(r){r&&(m(e),m(t),m(p),m(i),m(h),m(a)),m(s)}}}class Z extends j{constructor(s){super(),P(this,s,null,U,E,{})}}export{Z as component,X as universal};
+		<div><br/> <ds-tw-button variant="primary-2" link="#" hasarrow="">Sint laborum</ds-tw-button></div></span> <span slot="buttons"><ds-tw-button link="#">Enquire</ds-tw-button></span>`;return{c(){s=x("meta"),e=y(),t=x("ds-tw-band"),t.innerHTML=c,p=y(),i=x("ds-tw-pricing"),i.innerHTML=g,v=y(),a=x("ds-tw-feature"),a.innerHTML=z,this.h()},l(r){const o=I("svelte-11yaft7",document.head);s=w(o,"META",{name:!0,content:!0}),o.forEach(m),e=k(r),t=w(r,"DS-TW-BAND",{variant:!0,height:!0,"to-center":!0,bgImage:!0,skew:!0,"data-svelte-h":!0}),C(t)!=="svelte-nyngxl"&&(t.innerHTML=c),p=k(r),i=w(r,"DS-TW-PRICING",{variant:!0,"data-svelte-h":!0}),C(i)!=="svelte-kgfsd4"&&(i.innerHTML=g),v=k(r),a=w(r,"DS-TW-FEATURE",{image:!0,variant:!0,skew:!0,"data-svelte-h":!0}),C(a)!=="svelte-1dirdkq"&&(a.innerHTML=z),this.h()},h(){document.title="Pricing",M(s,"name","description"),M(s,"content","About this app"),d(t,"variant","primary"),d(t,"height","400"),d(t,"to-center",""),d(t,"bgImage","images/banner3.jpg"),d(t,"skew",""),d(i,"variant","primary"),d(a,"image","images/banner2.jpg"),d(a,"variant","primary"),d(a,"skew","")},m(r,o){B(document.head,s),h(r,e,o),h(r,t,o),h(r,p,o),h(r,i,o),h(r,v,o),h(r,a,o)},p:f,i:f,o:f,d(r){r&&(m(e),m(t),m(p),m(i),m(v),m(a)),m(s)}}}class Z extends j{constructor(s){super(),P(this,s,null,U,E,{})}}export{Z as component,X as universal};
