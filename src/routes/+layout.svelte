@@ -3,11 +3,9 @@
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-menu/ds-tw-menu.js';
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-toast/ds-tw-toast.js';
 	import './styles.css';
-	// import '$lib/styles.css';
 
 	let menus = [
 		{ name: 'Home', href: '/' },
-		// { name: 'Blog', href: '/blog' },
 		{ name: 'Packages', href: '/pricing' },
 		{ name: 'Contact', href: '/contact' }
 	];

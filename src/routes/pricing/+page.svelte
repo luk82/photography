@@ -13,7 +13,7 @@
 
 <svelte:head>
 	<title>Pricing</title>
-	<meta name="description" content="About this app" />
+	<meta name="description" content="Wedding Photogrraphy" />
 </svelte:head>
 
 <ds-tw-band variant="primary" height="450" to-center="" bgImage="images/slider-1.jpg" skew=""

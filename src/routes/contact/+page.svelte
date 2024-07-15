@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>Contact</title>
-	<meta name="description" content="About this app" />
+	<meta name="description" content="Wedding Photography" />
 </svelte:head>
 
 <ds-tw-band variant="primary" height="450" to-center="" bgImage="images/banner3.jpg" skew=""
