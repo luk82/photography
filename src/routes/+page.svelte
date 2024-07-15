@@ -1,16 +1,4 @@
 <script>
-	// import Counter from './Counter.svelte';
-	// import welcome from '$lib/images/svelte-welcome.webp';
-	// import welcome_fallback from '$lib/images/svelte-welcome.png';
-
-	// import '@luk82/ds-lit-tailwind/src/components/ds-tw-cta/ds-tw-cta.js';
-	// import '@luk82/ds-lit-tailwind/src/components/ds-tw-feature/ds-tw-feature.js';
-	// import '@luk82/ds-lit-tailwind/src/components/ds-tw-membership/ds-tw-membership.js';
-	// import '@luk82/ds-lit-tailwind/src/components/ds-tw-pricing/ds-tw-pricing.js';
-	// import '@luk82/ds-lit-tailwind/src/components/ds-tw-button/ds-tw-button.js';
-	// import '@luk82/ds-lit-tailwind/src/components/ds-tw-hero/ds-tw-hero.js';
-	// import '@luk82/ds-lit-tailwind/src/components/ds-tw-card/ds-tw-card.js';
-	// import '@luk82/ds-lit-tailwind/src/components/ds-tw-calendar/ds-tw-calendar.js';
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-band/ds-tw-band.js';
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-darkmode/ds-tw-darkmode.js';
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-image/ds-tw-image.js';
@@ -18,11 +6,9 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Wedding Photography: LC Photography</title>
+	<meta name="description" content="LC Wedding Photography" />
 </svelte:head>
-
-<!-- <ds-tw-darkmode /> -->
 
 <ds-tw-band to-center height="450" bgImage="/images/banner3.jpg" />
 

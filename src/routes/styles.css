@@ -125,6 +125,12 @@
 
 	--form-bg: var(--color5);
 
+	--card-theme: var(--color1);
+	--card-primary: var(--color5);
+
+	--button-theme: var(--color1);
+	--button-primary: var(--color5);
+
 	#bookingform {
 		--cta-theme: var(--color1);
 		--cta-text: rgb(0 0 0);

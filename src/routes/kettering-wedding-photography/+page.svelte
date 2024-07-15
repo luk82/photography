@@ -63,15 +63,16 @@
 				for couples to share their special moments with friends and family around the world.
 			</p>
 
-			<ds-tw-card
+			<ds-tw-card variant="primary"
 				><span slot="header">Capturing Your Perfect Day: Wedding Photography in Kettering</span
 				><span slot="body"
-					>Preserve your wedding memories with Kettering's top photographers. Using beautiful local
-					venues like Barton Hall and Wicksteed Park, we capture every special moment with advanced
-					techniques and personalized styles, ensuring your day is cherished forever. <ds-tw-button
-						variant="primary-4"
-						link="/pricing">See Packages</ds-tw-button
-					></span
+					><p>
+						Preserve your wedding memories with Kettering's top photographers. Using beautiful local
+						venues like Barton Hall and Wicksteed Park, we capture every special moment with
+						advanced techniques and personalized styles, ensuring your day is cherished forever.
+					</p>
+
+					<ds-tw-button variant="primary-4" link="/pricing">See Packages</ds-tw-button></span
 				></ds-tw-card
 			>
 			<p>
