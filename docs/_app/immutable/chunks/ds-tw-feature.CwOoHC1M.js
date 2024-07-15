@@ -1,4 +1,12 @@
-import{s as x,T as g,i as u,x as s,r as c,e as i,a as m}from"./class-map.4yN0Eo_Y.js";function v(f,a,r,t="",e={}){const l=function(d){d.forEach(n=>{n.isIntersecting?n.target.classList.add(r):t&&n.target.classList.remove(t)})},o=new IntersectionObserver(l,e);f.shadowRoot.querySelectorAll(a).forEach(d=>{t&&d.classList.add(t),o.observe(d)})}class h extends x{static get styles(){return[g,u`
+import{s as g,T as x,x as s,i as u,r as m,e as r,b as f}from"./class-map.c_00f5Aq.js";function v(d,t,l,e="",a={}){const i=function(n){n.forEach(c=>{c.isIntersecting?c.target.classList.add(l):e&&c.target.classList.remove(e)})},o=new IntersectionObserver(i,a);d.shadowRoot.querySelectorAll(t).forEach(n=>{e&&n.classList.add(e),o.observe(n)})}class h extends g{static get styles(){return[x]}static get properties(){return{images:{type:Array}}}constructor(){super(),this.images=[]}listImages(t){return t==null?void 0:t.map(l=>(console.log("image",l),s`
+        <div class="flex-shrink-0 snap-center snap-always">
+          <img src="${l}" height="100%" width="auto" class="h-96" />
+        </div>
+      `))}render(){return console.log("this.images",this.images),s`
+      <div class="flex snap-x space-x-8 overflow-x-auto">
+        ${this.listImages(this.images)}
+      </div>
+    `}}customElements.define("ds-tw-scroll",h);class p extends g{static get styles(){return[x,u`
         :host {
           --skew-bg: var(--feature-bg);
         }
@@ -16,10 +24,18 @@ import{s as x,T as g,i as u,x as s,r as c,e as i,a as m}from"./class-map.4yN0Eo_
           grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
           gap: 1rem;
         }
-      `]}static get properties(){return{variant:{type:String},image:{type:String},imageWidth:{type:String},imageHeight:{type:String},skew:{type:String},enableFadeIn:{type:Boolean},fullWidth:{type:Boolean},marginBottom:{type:Boolean}}}constructor(){super(),this.imageWidth="auto",this.imageHeight="auto",this.image="/images/office-1.jpg",this.variant="primary",this.skew="none",this.enableFadeIn=!1,this.fullWidth=!1,this.marginBottom=!1}get _slottedContent(){return this.querySelectorAll("[slot=col-1]")}slottedContentIntoGrid(a){return a.length===0?void 0:a.reduce((t,e)=>{const l=Array.from(e.childNodes).filter(o=>o.nodeType===Node.ELEMENT_NODE);return l.forEach(o=>o.classList.add("test")),t.concat(l)},[])}renderTemplate(){const a={"show-on-scroll opacity-0":this.enableFadeIn},r={"mb-[var(--margin-bottom)]":this.marginBottom};if(this.variant=="primary")return s`
-        ${c(this.skew)}
+      `]}static get properties(){return{variant:{type:String},image:{type:String},imageWidth:{type:String},imageHeight:{type:String},skew:{type:String},enableFadeIn:{type:Boolean},fullWidth:{type:Boolean},marginBottom:{type:Boolean}}}constructor(){super(),this.imageWidth="auto",this.imageHeight="auto",this.image="/images/office-1.jpg",this.variant="primary",this.skew="none",this.enableFadeIn=!1,this.fullWidth=!1,this.marginBottom=!1}get _slottedContent(){return this.querySelectorAll("[slot=col-1]")}slottedContentIntoGrid(t){return t.length===0?void 0:t.reduce((e,a)=>{const i=Array.from(a.childNodes).filter(o=>o.nodeType===Node.ELEMENT_NODE);return i.forEach(o=>o.classList.add("test")),e.concat(i)},[])}renderImages(){if(this.image!=="")return this.image.length>1?s`<ds-tw-scroll
+        images=${JSON.stringify(this.image)}
+      ></ds-tw-scroll>`:`<img
+                src="${this.image}"
+                alt="Product screenshot"
+                class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                width="${this.imageWidth}"
+                height="${this.imageHeight}"
+              />`}renderTemplate(){const t={"show-on-scroll opacity-0":this.enableFadeIn},l={"mb-[var(--margin-bottom)]":this.marginBottom};if(this.variant=="primary")return s`
+        ${m(this.skew)}
         <div
-          class="${i(r)} overflow-hidden rounded-[var(--feature-border-radius)] bg-[var(--feature-bg)] py-8 sm:py-12"
+          class="${r(l)} overflow-hidden rounded-[var(--feature-border-radius)] bg-[var(--feature-bg)] py-8 sm:py-12"
         >
           <div class="container mx-auto px-6 lg:px-8">
             <div
@@ -47,17 +63,11 @@ import{s as x,T as g,i as u,x as s,r as c,e as i,a as m}from"./class-map.4yN0Eo_
                   </dl>
                 </div>
               </div>
-              <img
-                src="${this.image}"
-                alt="Product screenshot"
-                class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-                width="${this.imageWidth}"
-                height="${this.imageHeight}"
-              />
+              ${this.renderImages()}
             </div>
           </div>
         </div>
-        ${m(this.skew)}
+        ${f(this.skew)}
       `;if(this.variant=="primary-2")return s` <div
         class="mb-8 rounded-[var(--feature-border-radius)] bg-[var(--feature-bg)] p-8"
       >
@@ -161,7 +171,7 @@ import{s as x,T as g,i as u,x as s,r as c,e as i,a as m}from"./class-map.4yN0Eo_
           </div>
         </div>
       </div>`;if(this.variant=="primary-3")return s`<div
-        class="${i(r)} rounded-[var(--feature-border-radius)] bg-[var(--feature-bg)] px-8 py-16 md:px-16"
+        class="${r(l)} rounded-[var(--feature-border-radius)] bg-[var(--feature-bg)] px-8 py-16 md:px-16"
       >
         <div class="container -m-8 mx-auto flex flex-wrap">
           <div class="w-full py-8 pr-8 md:w-1/2">
@@ -193,10 +203,10 @@ import{s as x,T as g,i as u,x as s,r as c,e as i,a as m}from"./class-map.4yN0Eo_
             </div>
           </div>
         </div>
-      </div>`;if(this.variant=="secondary"){const t={"max-w-[var(--container-width)]":!this.fullWidth,"max-w-full":this.fullWidth};return s`<section>
-        ${c(this.skew)}
+      </div>`;if(this.variant=="secondary"){const e={"max-w-[var(--container-width)]":!this.fullWidth,"max-w-full":this.fullWidth};return s`<section>
+        ${m(this.skew)}
         <div
-          class="${i(t)} mx-auto bg-[var(--feature-bg)] py-20"
+          class="${r(e)} mx-auto bg-[var(--feature-bg)] py-20"
         >
           <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-center">
@@ -217,12 +227,12 @@ import{s as x,T as g,i as u,x as s,r as c,e as i,a as m}from"./class-map.4yN0Eo_
               </div>
               <div class="-mx-4 flex w-full flex-wrap lg:w-1/2">
                 <div
-                  class="${i(a)} mb-8 w-full px-4  md:w-1/2 lg:mb-0"
+                  class="${r(t)} mb-8 w-full px-4  md:w-1/2 lg:mb-0"
                 >
                   <slot name="col-1"></slot>
                 </div>
                 <div
-                  class="${i(a)} w-full px-4 md:w-1/2 lg:mt-20"
+                  class="${r(t)} w-full px-4 md:w-1/2 lg:mt-20"
                 >
                   <slot name="col-2"></slot>
                 </div>
@@ -230,9 +240,9 @@ import{s as x,T as g,i as u,x as s,r as c,e as i,a as m}from"./class-map.4yN0Eo_
             </div>
           </div>
         </div>
-        ${m(this.skew)}
-      </section>`}if(this.variant=="secondary-2"){const t=Array.from(this._slottedContent),e=this.slottedContentIntoGrid(t),l={"grid-cols-1":e.length===1,"grid-cols-2":e.length===2,"grid-cols-3":e.length===3,"grid-cols-4":e.length===4||e.length>4};return s`<section>
-          ${c(this.skew)}
+        ${f(this.skew)}
+      </section>`}if(this.variant=="secondary-2"){const e=Array.from(this._slottedContent),a=this.slottedContentIntoGrid(e),i={"grid-cols-1":a.length===1,"grid-cols-2":a.length===2,"grid-cols-3":a.length===3,"grid-cols-4":a.length===4||a.length>4};return s`<section>
+          ${m(this.skew)}
           <div class="bg-[var(--feature-bg)] py-20">
             <div class="container mx-auto px-4">
               <div class="mx-auto mb-16 max-w-md text-center">
@@ -248,10 +258,10 @@ import{s as x,T as g,i as u,x as s,r as c,e as i,a as m}from"./class-map.4yN0Eo_
                   <slot name="body"></slot>
                 </div>
               </div>
-              <div class="${i(l)} grid gap-4">${e}</div>
+              <div class="${r(i)} grid gap-4">${a}</div>
             </div>
           </div>
-          ${m(this.skew)}
+          ${f(this.skew)}
         </section>
         <slot name="col-1"></slot>`}if(this.variant=="tertiary")return s`<section
         class="rounded-b-10xl bg-[var(--feature-bg)] py-24 font-medium 2xl:pb-40 2xl:pt-52"
@@ -322,4 +332,4 @@ import{s as x,T as g,i as u,x as s,r as c,e as i,a as m}from"./class-map.4yN0Eo_
             </div>
           </div>
         </div>
-      </section>`}firstUpdated(){this.enableFadeIn&&v(this,".show-on-scroll","animate-fadeIn","opacity-0")}render(){return this.renderTemplate()}}customElements.define("ds-tw-feature",h);
+      </section>`}firstUpdated(){this.enableFadeIn&&v(this,".show-on-scroll","animate-fadeIn","opacity-0")}render(){return this.renderTemplate()}}customElements.define("ds-tw-feature",p);
