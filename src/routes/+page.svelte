@@ -24,7 +24,7 @@
 
 <!-- <ds-tw-darkmode /> -->
 
-<ds-tw-band to-center height="400" bgImage="/images/banner3.jpg" />
+<ds-tw-band to-center height="450" bgImage="/images/banner3.jpg" />
 
 <ds-tw-feature variant="secondary" image="/images/banner4.jpg" imageWidth="100">
 	<span slot="kicker" />

@@ -13,7 +13,7 @@
 
 <ds-tw-band
 	variant="primary"
-	height="400"
+	height="450"
 	to-center=""
 	bgImage="images/wedding-photography.jpg"
 	skew=""

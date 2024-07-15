@@ -16,7 +16,7 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<ds-tw-band variant="primary" height="400" to-center="" bgImage="images/slider-1.jpg" skew=""
+<ds-tw-band variant="primary" height="450" to-center="" bgImage="images/slider-1.jpg" skew=""
 	><div slot="header" />
 	<div slot="body">
 		<p />
