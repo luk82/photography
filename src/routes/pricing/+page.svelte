@@ -3,6 +3,12 @@
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-membership/ds-tw-membership.js';
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-band/ds-tw-band.js';
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-feature/ds-tw-feature.js';
+
+	const sliderImagesArray = [
+		'images/wedding-photography-corby.jpg',
+		'images/image.png',
+		'images/pre-wedding-session.jpg'
+	];
 </script>
 
 <svelte:head>
@@ -18,7 +24,7 @@
 </ds-tw-band>
 
 <ds-tw-pricing variant="primary">
-	<span slot="title">Packages</span>
+	<span slot="title">Wedding Photograpgy Packages</span>
 	<span slot="body">
 		<p>
 			At LC Photography, we offer three luxurious wedding package options - Silver, Gold, and
@@ -122,7 +128,7 @@ Additional copy of a wedding album;
 	</span>
 </ds-tw-pricing>
 
-<ds-tw-feature image="images/wedding-photography-sessions.jpg" variant="primary"
+<ds-tw-feature image={sliderImagesArray} variant="primary"
 	><span slot="kicker">Capture the Magic Before the Big Day</span>
 	<span slot="header"> Discover the Charm and Intimacy of Pre-Wedding Photography Sessions</span>
 	<span slot="body">

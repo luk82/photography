@@ -1,27 +1,35 @@
 <script>
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-footer/ds-tw-footer.js';
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-menu/ds-tw-menu.js';
+	import '@luk82/ds-lit-tailwind/src/components/ds-tw-toast/ds-tw-toast.js';
 	import './styles.css';
 	// import '$lib/styles.css';
 
 	let menus = [
 		{ name: 'Home', href: '/' },
 		// { name: 'Blog', href: '/blog' },
-		{ name: 'Pricing', href: '/pricing' },
+		{ name: 'Packages', href: '/pricing' },
 		{ name: 'Contact', href: '/contact' }
 	];
 
 	let footerLinks = [
 		{
 			name: '',
-			links: menus
+			links: [
+				...menus,
+				{ name: 'Kettering Wedding Photography', href: '/kettering-wedding-photography' },
+				{ name: 'Corby Wedding Photography', href: '/corby-wedding-photography' },
+				{ name: 'Northampton Wedding Photography', href: '/northampton-wedding-photography' }
+			]
 		}
 	];
 </script>
 
+<ds-tw-toast />
+
 <ds-tw-menu logoLink="/" links={menus}>
 	<span slot="logo"
-		><img src="images/logo.svg" width="75" alt="LC Photography" /><span class="white" /></span
+		><img src="images/logo.png" width="125" alt="LC Photography" /><span class="white" /></span
 	></ds-tw-menu
 >
 

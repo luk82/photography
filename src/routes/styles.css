@@ -19,11 +19,17 @@
 
 	/* _EXAMPLE_ Colors */
 	/* https://coolors.co/0e7c7b-17bebb-d4f4dd-d62246-4b1d3f */
-	--color1: rgb(37 147 184);
+	/* --color1: rgb(37 147 184);
 	--color2: rgb(35 181 211);
 	--color3: rgb(117 171 188);
 	--color4: rgb(162 174 187);
-	--color5: rgb(223 224 174);
+	--color5: rgb(223 224 174); */
+
+	--color1: rgb(145 105 83);
+	--color2: rgb(207 142 128);
+	--color3: rgb(252 181 181);
+	--color4: rgb(252 221 242);
+	--color5: rgb(250 246 246);
 
 	/* --color1: rgb(14 124 123);
 	--color2: rgb(23 190 187);
@@ -61,6 +67,7 @@
 	--secondary-dark: var(--color3);
 
 	--menu-bg: rgb(255 255 255);
+	--menu-primary: rgb(0 0 0);
 	--footer-bg: var(--menu-bg);
 
 	--band-bg: var(--color5);
@@ -75,11 +82,8 @@
 	--feature-bg: var(--color2);
 	--feature-text: rgb(0 0 0);
 
-	--feature-bg: var(--color5);
-	--feature-text: rgb(0 0 0);
-
 	[variant='secondary'] {
-		--feature-bg: var(--color1);
+		--feature-bg: var(--color5);
 		--feature-text: rgb(0 0 0);
 	}
 
@@ -88,6 +92,11 @@
 	--cta-theme: var(--color1);
 	--cta-bg: var(--color1);
 	--cta-bg-right: var(--color1);
+
+	#cta-copy {
+		--cta-bg: rgb(255 255 255);
+		--cta-text: rgb(0 0 0);
+	}
 
 	--cta-text: #fdfdfd;
 	--cta-border-radius: 0px;
@@ -99,12 +108,10 @@
 	--pricing-secondary: var(--color4);
 	--pricing-bg: var(--color1);
 
-	--membership-theme: var(--color5);
+	--membership-theme: var(--color1);
 	--membership-primary: var(--color4);
 	--membership-secondary: var(--color1);
 	--membership-bg: rgb(255 255 255);
-
-	--menu-primary: var(--color1);
 
 	--button-theme: var(--color5);
 	--button-primary: var(--color1);
