@@ -6,7 +6,7 @@
 
 	const sliderImagesArray = [
 		'images/wedding-photography-corby.jpg',
-		'images/image.png',
+		'images/image.jpg',
 		'images/pre-wedding-session.jpg'
 	];
 </script>

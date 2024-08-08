@@ -3,6 +3,20 @@
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-menu/ds-tw-menu.js';
 	import '@luk82/ds-lit-tailwind/src/components/ds-tw-toast/ds-tw-toast.js';
 	import './styles.css';
+	import { onMount } from 'svelte';
+
+	let gtmId = 'G-SD68R082VX';
+	onMount(async () => {
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', gtmId);
+		var s = document.createElement('script');
+		s.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
+		document.head.append(s);
+	});
 
 	let menus = [
 		{ name: 'Home', href: '/' },
