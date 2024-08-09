@@ -2291,6 +2291,10 @@ video {
   background-color: rgb(255 255 255 / 0.05);
 }
 
+.bg-\\[var\\(--search-theme\\)\\] {
+  background-color: var(--search-theme);
+}
+
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
 }
@@ -3407,6 +3411,14 @@ video {
 .hover\\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\\:bg-\\[var\\(--search-primary\\)\\]:hover {
+  background-color: var(--search-primary);
+}
+
+.hover\\:bg-\\[var\\(--search-secondary\\)\\]:hover {
+  background-color: var(--search-secondary);
 }
 
 .hover\\:fill-gray-500:hover {

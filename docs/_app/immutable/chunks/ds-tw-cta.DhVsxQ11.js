@@ -1,4 +1,4 @@
-import{s as r,T as i,i as o,x as t,e,a,r as d,b as n}from"./class-map.c_00f5Aq.js";class c extends r{static get styles(){return[i,o`
+import{s as r,T as i,i as o,x as t,e,a,r as d,b as n}from"./class-map.CUp2aMEF.js";class c extends r{static get styles(){return[i,o`
         :host {
           --skew-bg: var(--cta-bg);
         }
@@ -48,9 +48,9 @@ import{s as r,T as i,i as o,x as t,e,a,r as d,b as n}from"./class-map.c_00f5Aq.j
                       </radialGradient>
                     </defs>
                   </svg>`:a}
-              <div class="container lg:flex">
+              <div class="container mx-auto lg:flex">
                 <div
-                  class="mx-auto max-w-xl text-center lg:mx-0 lg:flex-auto lg:text-left"
+                  class="mx-auto text-center lg:mx-0 lg:flex-auto lg:text-left"
                 >
                   <h2
                     class="text-3xl font-bold tracking-tight text-[var(--cta-text)] sm:text-4xl"

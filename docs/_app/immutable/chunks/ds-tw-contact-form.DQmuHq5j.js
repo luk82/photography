@@ -1,4 +1,4 @@
-import{s as i,T as d,d as m,x as n}from"./class-map.c_00f5Aq.js";function p(s,e,a){const r={email:a.email,name:a.full_name,number:a.phonenumber,content:a.message};fetch(s,{method:"POST",headers:e,body:JSON.stringify(r)}).then(t=>t.json()).then(t=>console.log(t)).catch(t=>console.error("Error:",t))}class u extends i{static get styles(){return[d]}static get properties(){return{image:{type:String},variant:{type:String},addHiddenField:{type:String},title:{type:String},messageText:{type:String},message:{type:String},url:{type:String}}}constructor(){super(),this.image="",this.variant="primary",this.addHiddenField="",this.message="",this.messageText="Form submitted",this.url=""}handleSubmit(e){if(e.preventDefault(),!this.url)return!1;if(this.url!=="test"){const r=e.target,t=new FormData(r),o=Object.fromEntries(t.entries());this.message=this.messageText;const l=this.url;p(l,{Accept:"application/json; charset=utf-8","Content-Type":"application/json; charset=UTF-8"},o)}m({message:"Form Submitted",eventName:"ds-toast"},this)}createHiddenField(e){return n`<label for="details">
+import{s as i,T as d,d as m,x as n}from"./class-map.CUp2aMEF.js";function p(s,e,a){const r={email:a.email,name:a.full_name,number:a.phonenumber,content:a.message};fetch(s,{method:"POST",headers:e,body:JSON.stringify(r)}).then(t=>t.json()).then(t=>console.log(t)).catch(t=>console.error("Error:",t))}class u extends i{static get styles(){return[d]}static get properties(){return{image:{type:String},variant:{type:String},addHiddenField:{type:String},title:{type:String},messageText:{type:String},message:{type:String},url:{type:String}}}constructor(){super(),this.image="",this.title="",this.variant="primary",this.addHiddenField="",this.message="",this.messageText="Form submitted",this.url=""}handleSubmit(e){if(e.preventDefault(),!this.url)return!1;if(this.url!=="test"){const r=e.target,t=new FormData(r),o=Object.fromEntries(t.entries());this.message=this.messageText;const l=this.url;p(l,{Accept:"application/json; charset=utf-8","Content-Type":"application/json; charset=UTF-8"},o)}m({message:"Form Submitted",eventName:"ds-toast"},this)}createHiddenField(e){return n`<label for="details">
       <input
         type="hidden"
         name="details"
@@ -14,6 +14,8 @@ import{s as i,T as d,d as m,x as n}from"./class-map.c_00f5Aq.js";function p(s,e,
         novalidate
       >
         <h2 class="mb-6 text-3xl">${this.title}</h2>
+
+        <div class="mb-8"><slot></slot></div>
 
         <label for="full_name" class="mb-6">
           <span>Full Name</span>

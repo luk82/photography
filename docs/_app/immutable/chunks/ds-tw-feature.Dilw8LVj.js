@@ -1,4 +1,4 @@
-import{s as g,T as x,x as s,i as u,r as m,e as r,b as f}from"./class-map.c_00f5Aq.js";function v(d,t,l,e="",a={}){const i=function(n){n.forEach(c=>{c.isIntersecting?c.target.classList.add(l):e&&c.target.classList.remove(e)})},o=new IntersectionObserver(i,a);d.shadowRoot.querySelectorAll(t).forEach(n=>{e&&n.classList.add(e),o.observe(n)})}class h extends g{static get styles(){return[x]}static get properties(){return{images:{type:Array}}}constructor(){super(),this.images=[]}listImages(t){return t==null?void 0:t.map(l=>(console.log("image",l),s`
+import{s as g,T as x,x as s,i as u,r as m,e as r,b as f}from"./class-map.CUp2aMEF.js";function v(d,t,l,e="",a={}){const i=function(n){n.forEach(c=>{c.isIntersecting?c.target.classList.add(l):e&&c.target.classList.remove(e)})},o=new IntersectionObserver(i,a);d.shadowRoot.querySelectorAll(t).forEach(n=>{e&&n.classList.add(e),o.observe(n)})}class h extends g{static get styles(){return[x]}static get properties(){return{images:{type:Array}}}constructor(){super(),this.images=[]}listImages(t){return t==null?void 0:t.map(l=>(console.log("image",l),s`
         <div class="flex-shrink-0 snap-center snap-always">
           <img src="${l}" height="100%" width="auto" class="h-96" />
         </div>
@@ -24,15 +24,15 @@ import{s as g,T as x,x as s,i as u,r as m,e as r,b as f}from"./class-map.c_00f5A
           grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
           gap: 1rem;
         }
-      `]}static get properties(){return{variant:{type:String},image:{type:String},imageWidth:{type:String},imageHeight:{type:String},skew:{type:String},enableFadeIn:{type:Boolean},fullWidth:{type:Boolean},marginBottom:{type:Boolean}}}constructor(){super(),this.imageWidth="auto",this.imageHeight="auto",this.image="/images/office-1.jpg",this.variant="primary",this.skew="none",this.enableFadeIn=!1,this.fullWidth=!1,this.marginBottom=!1}get _slottedContent(){return this.querySelectorAll("[slot=col-1]")}slottedContentIntoGrid(t){return t.length===0?void 0:t.reduce((e,a)=>{const i=Array.from(a.childNodes).filter(o=>o.nodeType===Node.ELEMENT_NODE);return i.forEach(o=>o.classList.add("test")),e.concat(i)},[])}renderImages(){if(this.image!=="")return this.image.length>1?s`<ds-tw-scroll
+      `]}static get properties(){return{variant:{type:String},image:{type:String},imageWidth:{type:String},imageHeight:{type:String},skew:{type:String},enableFadeIn:{type:Boolean},fullWidth:{type:Boolean},marginBottom:{type:Boolean}}}constructor(){super(),this.imageWidth="auto",this.imageHeight="auto",this.image="/images/office-1.jpg",this.variant="primary",this.skew="none",this.enableFadeIn=!1,this.fullWidth=!1,this.marginBottom=!1}get _slottedContent(){return this.querySelectorAll("[slot=col-1]")}slottedContentIntoGrid(t){return t.length===0?void 0:t.reduce((e,a)=>{const i=Array.from(a.childNodes).filter(o=>o.nodeType===Node.ELEMENT_NODE);return i.forEach(o=>o.classList.add("test")),e.concat(i)},[])}renderImages(){if(this.image!=="")return console.log(this.image.indexOf(",")),this.image.indexOf(",")>-1?s`<ds-tw-scroll
         images=${JSON.stringify(this.image)}
-      ></ds-tw-scroll>`:`<img
-                src="${this.image}"
-                alt="Product screenshot"
-                class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-                width="${this.imageWidth}"
-                height="${this.imageHeight}"
-              />`}renderTemplate(){const t={"show-on-scroll opacity-0":this.enableFadeIn},l={"mb-[var(--margin-bottom)]":this.marginBottom};if(this.variant=="primary")return s`
+      ></ds-tw-scroll>`:s`<img
+        src="${this.image}"
+        alt="Product screenshot"
+        class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+        width="${this.imageWidth}"
+        height="${this.imageHeight}"
+      />`}renderTemplate(){const t={"show-on-scroll opacity-0":this.enableFadeIn},l={"mb-[var(--margin-bottom)]":this.marginBottom};if(this.variant=="primary")return s`
         ${m(this.skew)}
         <div
           class="${r(l)} overflow-hidden rounded-[var(--feature-border-radius)] bg-[var(--feature-bg)] py-8 sm:py-12"
