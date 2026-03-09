@@ -35,5 +35,5 @@
 		><img src="images/logo.svg" width="75" alt="LC Photography" /><span class="white" /></span
 	> -->
 	<span slot="header" />
-	<span slot="footnote">© 2024 LC Photography.</span></ds-tw-footer
+	<span slot="footnote">© 2026 LC Photography.</span></ds-tw-footer
 >
