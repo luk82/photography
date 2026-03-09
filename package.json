@@ -18,8 +18,8 @@
 		"@fontsource/fira-mono": "^4.5.10",
 		"@neoconfetti/svelte": "^1.0.0",
 		"@playwright/test": "^1.28.1",
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/kit": "^2.53.4",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/cookie": "^0.5.1",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
@@ -37,6 +37,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@luk82/ds-lit-tailwind": "^1.0.27"
+		"@luk82/ds-lit-tailwind": "^1.0.27",
+		"@sveltejs/adapter-vercel": "^6.3.3"
 	}
 }
